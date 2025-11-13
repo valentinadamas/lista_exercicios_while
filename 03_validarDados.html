@@ -11,11 +11,31 @@
     */
 
     //ENTRADA
-
+    let valido = "As informações estão válidas!";
 
     //PROCESSAMENTO
+    let nome = prompt(`Informe seu primeiro nome:`);
+    while (nome.length < 3) {
+        nome = prompt(`Informe seu primeiro nome:`);
+    }
 
-
+    let idade = Number(prompt(`Informe sua idade:`));
+    while ((idade < 0) || (idade > 150)) {
+        idade = Number(prompt(`Informe sua idade:`));
+    }
+    let salario = Number(prompt(`Informe seu salário:`));
+    while (salario < 0) {
+        salario = Number(prompt(`Informe seu salário:`));
+    }
+    let genero = prompt(`Informe seu gênero (f-m)`).toLowerCase();
+    while ((genero !== "f") && (genero !== "m")) {
+        genero = prompt(`Informe seu gênero (f-m)`).toLowerCase();
+    }
+    let estadoCivil = prompt(`Informe seu estado civil ("s"-solteiro; "c"-casado; "v"-viúvo; "d"-divorciado):`).toLowerCase().trim();
+    while ((estadoCivil !== "s") && (estadoCivil !== "c") && (estadoCivil !== "v") && (estadoCivil !== "d")) {
+        estadoCivil = prompt(`Informe seu estado civil ("s"-solteiro; "c"-casado; "v"-viúvo; "d"-divorciado):`).toLowerCase().trim();
+    }
+    
     //SAÍDA
-
+    alert(`${valido}`)
 </script>
