@@ -1,18 +1,29 @@
 <script>
     //Problema: Inversão de Número
     /*
-    Escreva um programa que peça ao usuário um número e inverta sua ordem usando uma estrutura de repetição while.
+    Escreva um programa que peça ao usuário um número e
+     inverta sua ordem usando uma estrutura de repetição while.
     Exemplo:
     Entrada: 12345
     Saída: 54321
     */
 
     //ENTRADA
+    let numero = Number(prompt(`Informe um número:`));
+    let invertido = "";
 
+    // PROCESSAMENTO    
+    for (let i = 0; i < 1; i++) {
+        let n = Number(numero);
 
-    //PROCESSAMENTO
-
+        while (n > 0) {
+            let ultimo = n % 10;
+            invertido += ultimo;
+            n = Math.floor(n / 10);
+        }
+    }
 
     //SAÍDA
-
+    alert(`O número ${numero}, invertido é: ${invertido}`);
+    
 </script>

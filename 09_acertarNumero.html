@@ -11,15 +11,15 @@
 
     //PROCESSAMENTO
     while (numeroAleatorio !== adivinharNumero){
-        if ((numeroAleatorio >= 1) || (numeroAleatorio <= 5) && (adivinharNumero > 5)){
+        if (numeroAleatorio < adivinharNumero){
             alert(`Menor!`);
         }
-        else if ((numeroAleatorio > 5) || (numeroAleatorio <= 10) && (adivinharNumero < 5)){
-            alert(`Maior`)
+        else {
+            alert(`Maior!`)
         }
-
+         adivinharNumero = Number(prompt(`Tente novamente:`));
     }
 
     //SAÍDA
-    
+        alert(`Acertou! O número era ${numeroAleatorio}.`)
 </script>
