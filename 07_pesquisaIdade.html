@@ -2,7 +2,8 @@
 <script>
     /*
     PROBLEMA: PESQUISA DE IDADE
-    Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário. Faça um programa que calcule e mostre:
+    Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, 
+    sexo (M/F) e salário. Faça um programa que calcule e mostre:
 
     a) A média dos salários do grupo;
     b) A maior e a menor idade do grupo;
@@ -13,10 +14,41 @@
     */
 
     //ENTRADA
-
+    let idade = Number(prompt(`Informe a sua idade:`));
+    let genero = prompt(`Informe o seu gênero(M/F):`).trim().toLowerCase();
+    let salario = Number(prompt(`Informe o seu salário:`));
 
     //PROCESSAMENTO
+    let idades = [];
+    let salarios = [];
+    let mulheres = 0;
+    
+    while (idade > 0){
+        idades.push(idade)
+        salarios.push(salario)
+        if (genero === "f"){
+            mulheres ++
+        }
+        idade = Number(prompt(`Informe a sua idade:`));
+        genero = prompt(`Informe o seu gênero(M/F):`).trim().toLowerCase();
+        salario = Number(prompt(`Informe o seu salário:`));
+    }
 
+          
+        // a) A média dos salários do grupo;
+        let totalSalarios = salarios =+;
+        let mediaSalarios = totalSalarios / salarios.length;
+        // b) A maior e a menor idade do grupo;
+        let maior = (idades.sort((a, b) => a - b)).pop();
+        let menor = (idades.sort((a, b) => a - b)).shift();
+        // c) A quantidade de mulheres na região;
+        // d) A idade e o sexo da pessoa que possui o menor salário;
+        let menorSalario = (salarios.sort((a, b) => a - b).shift());
+
+        if (salario === menorSalario){
+            
+        }
+        
 
     //SAÍDA
 
