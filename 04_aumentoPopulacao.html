@@ -10,11 +10,18 @@
     */
 
     //ENTRADA
-
+     //ENTRADA
+    let populacaoPaisA = 80000;
+    let populacaoPaisB = 200000;
+    let anos = 0;
 
     //PROCESSAMENTO
-
+    while (populacaoPaisA < populacaoPaisB) {
+        anos = anos + 1;
+        populacaoPaisA = populacaoPaisA * 1.03;
+        populacaoPaisB = populacaoPaisB * 1.015;
+    }
 
     //SAÍDA
-
+    alert(`Serão necessários ${anos} anos para que a população do País A seja igual ou superior a população do País B`);
 </script>

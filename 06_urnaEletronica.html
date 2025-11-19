@@ -19,12 +19,13 @@
     */
 
     //ENTRADA
-    let voto = Number(prompt(`As opções são: 
+    const msg = `As opções são: 
     1. Candidato Joãozinho
     2. Candidato Mariazinha
     3. Nulo
     4. Branco
-    Entre com o seu voto(1-2-3-4, se, 0, resultados.):`));
+    Entre com o seu voto(1-2-3-4, se, 0, resultados.):`
+    let voto = Number(prompt(msg));
 
     //PROCESSAMENTO
     let joaozinho = 0;
@@ -33,28 +34,12 @@
     let branco = 0;
 
     while (voto !== 0) {
-        if ((voto === 1)) {
-            joaozinho++
-        }
-        else if ((voto === 2)) {
-            mariazinha++
-        }
-        else if ((voto === 3)) {
-            nulo++
-        }
-        else if ((voto === 4)) {
-            branco++
-        }
-        else {
-            alert("Inválido! Digite 1, 2, 3, 4 ou 0 para encerrar.");
-        }
-        voto = Number(prompt(`As opções são: 
-        1. Candidato Joãozinho
-        2. Candidato Mariazinha
-        3. Nulo
-        4. Branco
-        0. Resultados
-        Entre com o seu voto (1-2-3-4, 0 para encerrar):`));
+        if (voto === 1) joaozinho++
+        else if (voto === 2) mariazinha++
+        else if (voto === 3) nulo++
+        else if (voto === 4) branco++
+        else alert("Inválido! Digite 1, 2, 3, 4 ou 0 para encerrar.");
+        voto = Number(prompt(msg));
     }
 
     // conta das porcentagens
@@ -67,21 +52,15 @@
     let porcentagemBrancos = (branco / totalVotos) * 100;
     // d) O candidato vencedor.
     let candidatoVencedor = "";
-    if (mariazinha > joaozinho) {
-        candidatoVencedor = "A candidata Mariazinha foi a vencedora.";
-    }
-    else if (joaozinho > mariazinha) {
-        candidatoVencedor = "O candidato Joãozinho foi o vencedor.";
-    }
-    else {
-        candidatoVencedor = "Não houve canditado vencedor. Seguiremos para o segundo turno."
-    }
+    if (mariazinha > joaozinho) candidatoVencedor = "A candidata Mariazinha foi a vencedora.";
+    else if (joaozinho > mariazinha) candidatoVencedor = "O candidato Joãozinho foi o vencedor.";
+    else candidatoVencedor = "Não houve canditado vencedor. Seguiremos para o segundo turno."
+
+    
+    //SAÍDA
+    
     alert(numeroVotos);
     alert(`A porcentagem de votos nulos foi ${porcentagemNulos.toFixed(2)}% e a porcentagem de votos brancos foi ${porcentagemBrancos.toFixed(2)}%.`);
     alert(candidatoVencedor)
-
-
-
-    //SAÍDA
-
+    
 </script>
